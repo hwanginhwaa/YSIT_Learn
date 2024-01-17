@@ -226,6 +226,7 @@ input {
   position: relative;
 }
 
+/* 767px 이하의 작은 화면에 대한 스타일 */
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -273,7 +274,7 @@ input {
 /* Change background header */
 .scroll-header {
   background-color: var(--body-color);
-  box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+  box-shadow: 0 0 4px rgba(245, 246, 247, 0.15);
 }
 
 .scroll-header .nav__logo,
@@ -316,18 +317,18 @@ input {
   row-gap: 3rem;
 }
 
-.home__data-subtitle,
+/* .home__data-subtitle, */
 .home__data-title,
 /* .home__social-link, */
 .home__info {
   color: var(--white-color);
 }
 
-.home__data-subtitle {
+/* .home__data-subtitle {
   display: block;
   font-weight: var(--font-semi-bold);
   margin-bottom: var(--mb-0-75);
-}
+} */
 
 .home__data-title {
   font-size: var(--biggest-font-size);
@@ -335,16 +336,16 @@ input {
   margin-bottom: var(--mb-2-5);
 }
 
-/* .home__social {
+.home__social {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
 } */
 
-/* .home__social-link {
+.home__social-link {
   font-size: 1.2rem;
   width: max-content;
-} */
+}
 
 .home__info {
   background-color: var(--first-color);
@@ -920,7 +921,7 @@ input {
   }
 
   .scroll-header .nav__link {
-    color: var(--text-color);
+    color: var(--text-color); /*루트 요소(:root)에서 정의되어 있음*/
   }
 
   .scroll-header .active-link {
@@ -1005,6 +1006,7 @@ input {
   }
 }
 
+/* 1024px 이상의 큰 화면에 대한 스타일 */
 @media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
@@ -1082,9 +1084,9 @@ input {
 }
 
 @media screen and (max-height: 721px) {
-  .home__data-subtitle {
+  /* .home__data-subtitle {
     font-size: var(--smaller-font-size);
-  }
+  } */
   .home__data-title {
     font-size: 2rem;
     margin-bottom: var(--mb);
